@@ -21,3 +21,11 @@ npm i 또는 npm install
 ```text
 npm start
 ```
+
+### Counter
+* typescript와 redux-toolkit 사용 연습
+* 가장 기본인 couter 구현
+
+### Mini Todo List
+* typescript, redux-toolkit 사용 연습
+* CRUD를 위한 연습
