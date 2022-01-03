@@ -12,6 +12,7 @@ import HomeCard from "../components/HomeCard";
 import calcImg from '../assets/images/calc.png'
 import rechartImg from '../assets/images/rechart.png'
 import nivoImg from '../assets/images/nivo.png'
+import todoImg from '../assets/images/todo.png'
 
 
 const Main = () => {
@@ -26,8 +27,13 @@ const Main = () => {
       <Wrapper>
         <HomeCard
           imgSrc={calcImg}
-          imgAlt={'calculator'}
-          title={'Redux calculator Test'}
+          imgAlt={'counter'}
+          title={'Counter'}
+          handleNavigate={handleNavigate} />
+        <HomeCard
+          imgSrc={todoImg}
+          imgAlt={'todo'}
+          title={'Mini Todo List'}
           handleNavigate={handleNavigate} />
         <HomeCard
           imgSrc={rechartImg}

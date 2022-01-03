@@ -8,6 +8,7 @@ import NivoChart from '../pages/nivo/NivoChart'
 
 // Types
 import { ReactElement } from "react";
+import MiniTodoList from "../pages/miniTodoList/MiniTodoList";
 interface routeType {
   path: string,
   element: ReactElement,
@@ -21,8 +22,12 @@ const routes = (): Array<routeType> => {
       element: <Main />,
     },
     {
-      path: '/calculator',
+      path: '/counter',
       element: <Counter />,
+    },
+    {
+      path: '/todo',
+      element: <MiniTodoList />,
     },
     {
       path: '/recharts',

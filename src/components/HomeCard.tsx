@@ -67,7 +67,7 @@ const InnerDivBox = styled.div`
   }
   img {
     object-fit: cover;
-    width: 10rem;
+    width: 9rem;
   }
   span {
     display: inline-block;
