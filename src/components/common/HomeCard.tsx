@@ -3,7 +3,7 @@ import React from 'react'
 
 // Styles
 import styled from "@emotion/styled";
-import {CommonColor, CommonFont} from "../assets/styles/common.styles";
+import {CommonColor, CommonFont} from "../../assets/styles/common.styles";
 
 // Types
 interface Props {

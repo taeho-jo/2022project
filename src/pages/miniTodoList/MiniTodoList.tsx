@@ -7,15 +7,15 @@ import { v4 as uuidv4 } from 'uuid';
 import { SubmitHandler } from "react-hook-form";
 
 // Components
-import PageHeader from "../../components/PageHeader";
+import PageHeader from "../../components/common/PageHeader";
 
 // Redux
 import {useDispatch, useSelector} from "react-redux";
 import {ReducerType} from "../../store/reducers/rootReducer";
 import {TodoType} from "../../store/reducers/todoReducer";
 import {create, checkDone, remove, update} from "../../store/reducers/todoReducer";
-import TodoFormField from "../../components/TodoFormField";
-import TodoList from "./TodoList";
+import TodoFormField from "../../components/todoList/TodoFormField";
+import TodoList from "../../components/todoList/TodoList";
 
 // Types
 export interface Inputs {

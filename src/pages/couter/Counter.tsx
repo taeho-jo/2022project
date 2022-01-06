@@ -2,7 +2,7 @@
 import React, { useCallback } from 'react'
 
 // Components
-import PageHeader from "../../components/PageHeader";
+import PageHeader from "../../components/common/PageHeader";
 
 // Redux
 import { useDispatch, useSelector } from "react-redux";

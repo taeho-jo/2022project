@@ -2,13 +2,13 @@ import React from "react";
 
 // Styles
 import styled from "@emotion/styled";
-import {CommonColor, CommonFont} from "../assets/styles/common.styles";
+import {CommonColor, CommonFont} from "../../assets/styles/common.styles";
 
 // Libraries
 import { useForm, SubmitHandler } from "react-hook-form";
 import { ErrorMessage } from '@hookform/error-message';
 // Types
-import {Inputs, ModifyInputs} from "../pages/miniTodoList/MiniTodoList";
+import {Inputs, ModifyInputs} from "../../pages/miniTodoList/MiniTodoList";
 
 interface PropsType {
   onSubmit: SubmitHandler<Inputs> | SubmitHandler<ModifyInputs>

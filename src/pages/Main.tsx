@@ -6,14 +6,30 @@ import { useNavigate } from "react-router-dom";
 
 // Styles
 import {Wrapper, MainContainer} from "./main.styles";
-import HomeCard from "../components/HomeCard";
+import HomeCard from "../components/common/HomeCard";
 
 // Images
 import calcImg from '../assets/images/calc.png'
+import todoImg from '../assets/images/todo.png'
+import hookForm from '../assets/images/hookform.png'
 import rechartImg from '../assets/images/rechart.png'
 import nivoImg from '../assets/images/nivo.png'
-import todoImg from '../assets/images/todo.png'
 
+// Types
+interface MainCardType {
+  img: string,
+  alt: string,
+  title: string
+}
+
+// Data
+const MAIN_HOME_CARD: Array<MainCardType> = [
+  {img: calcImg, alt: 'counter', title: 'Counter'},
+  {img: todoImg, alt: 'todo', title: 'Mini Todo List'},
+  {img: hookForm, alt: 'form', title: 'React Hook Form'},
+  {img: rechartImg, alt: 'recharts', title: 'Recharts Test'},
+  {img: nivoImg, alt: 'nivo', title: 'Nivo Chart Test'},
+]
 
 const Main = () => {
   const navigate = useNavigate();
@@ -25,26 +41,16 @@ const Main = () => {
   return (
     <MainContainer>
       <Wrapper>
-        <HomeCard
-          imgSrc={calcImg}
-          imgAlt={'counter'}
-          title={'Counter'}
-          handleNavigate={handleNavigate} />
-        <HomeCard
-          imgSrc={todoImg}
-          imgAlt={'todo'}
-          title={'Mini Todo List'}
-          handleNavigate={handleNavigate} />
-        <HomeCard
-          imgSrc={rechartImg}
-          imgAlt={'recharts'}
-          title={'Recharts Test'}
-          handleNavigate={handleNavigate} />
-        <HomeCard
-          imgSrc={nivoImg}
-          imgAlt={'nivo'}
-          title={'Nivo Chart Test'}
-          handleNavigate={handleNavigate} />
+        {MAIN_HOME_CARD.map((item, index) => {
+          return (
+            <HomeCard
+              key={index}
+              imgSrc={item.img}
+              imgAlt={item.alt}
+              title={item.title}
+              handleNavigate={handleNavigate} />
+          )
+        })}
       </Wrapper>
     </MainContainer>
 

@@ -9,6 +9,7 @@ import NivoChart from '../pages/nivo/NivoChart'
 // Types
 import { ReactElement } from "react";
 import MiniTodoList from "../pages/miniTodoList/MiniTodoList";
+import HookForm from "../pages/hookForm/HookForm";
 interface routeType {
   path: string,
   element: ReactElement,
@@ -28,6 +29,10 @@ const routes = (): Array<routeType> => {
     {
       path: '/todo',
       element: <MiniTodoList />,
+    },
+    {
+      path: '/form',
+      element: <HookForm />,
     },
     {
       path: '/recharts',

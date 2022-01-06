@@ -7,11 +7,11 @@ import { MdOutlineRemoveCircle, MdBorderColor, MdCheckBoxOutlineBlank, MdCheckBo
 // Styles
 import styled from "@emotion/styled";
 import { CommonColor, CommonFont } from "../../assets/styles/common.styles";
-import TodoFormField, {ModifyTodoFormField} from "../../components/TodoFormField";
+import TodoFormField, {ModifyTodoFormField} from "./TodoFormField";
 import {SubmitHandler} from "react-hook-form";
 import {v4 as uuidv4} from "uuid";
 import moment from "moment";
-import {Inputs, ModifyInputs} from "./MiniTodoList";
+import {Inputs, ModifyInputs} from "../../pages/miniTodoList/MiniTodoList";
 
 // Types
 interface PropsType {
