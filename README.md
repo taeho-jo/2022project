@@ -27,5 +27,7 @@ npm start
 * 가장 기본인 couter 구현
 
 ### Mini Todo List
-* typescript, redux-toolkit 사용 연습
-* CRUD를 위한 연습
+* typescript 
+* redux-toolkit
+* react-hook-form
+* 기본적인 CRUD 구현
