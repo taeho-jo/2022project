@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 const reset = css`
   * {
     html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,
-    blockquote,pre,abbr,address,cite,code,del,dfn,em,img,
+    blockquote,pre,abbr,address,cite,code,del,dfn,em,img, input,
     ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,
     fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,
     article,aside,canvas,details,figcaption,figure,footer,header,hgroup,
