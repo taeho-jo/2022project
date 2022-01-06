@@ -21,7 +21,7 @@ npm i 또는 npm install
 ```text
 npm start
 ```
-
+## 구현 목록
 ### Counter
 * typescript와 redux-toolkit 사용 연습
 * 가장 기본인 couter 구현
