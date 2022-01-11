@@ -14,6 +14,7 @@ import todoImg from '../assets/images/todo.png'
 import hookForm from '../assets/images/hookform.png'
 import rechartImg from '../assets/images/rechart.png'
 import nivoImg from '../assets/images/nivo.png'
+import storybook from '../assets/images/storybook.png'
 
 // Types
 interface MainCardType {
@@ -27,6 +28,7 @@ const MAIN_HOME_CARD: Array<MainCardType> = [
   {img: calcImg, alt: 'counter', title: 'Counter'},
   {img: todoImg, alt: 'todo', title: 'Mini Todo List'},
   {img: hookForm, alt: 'form', title: 'React Hook Form'},
+  {img: storybook, alt: 'storybook', title: 'Story Book'},
   {img: rechartImg, alt: 'recharts', title: 'Recharts Test'},
   {img: nivoImg, alt: 'nivo', title: 'Nivo Chart Test'},
 ]
