@@ -3,10 +3,10 @@ import React from "react";
 import Task, {TaskChildType, TaskPropsType} from "./Task";
 
 export interface TaskListPropsType {
-  loading: boolean,
-  tasks: TaskChildType[],
-  onPinTask: (id: string) => void,
-  onArchiveTask: (id: string) => void,
+  loading?: boolean,
+  tasks?: TaskChildType[],
+  onPinTask: (id?: string) => void,
+  onArchiveTask: (id?: string) => void,
 }
 
 const TaskList = ({loading, tasks, onPinTask, onArchiveTask}: TaskListPropsType) => {
@@ -14,16 +14,48 @@ const TaskList = ({loading, tasks, onPinTask, onArchiveTask}: TaskListPropsType)
     onPinTask,
     onArchiveTask,
   };
+  const LoadingRow = (
+    <div className="loading-item">
+      <span className="glow-checkbox" />
+      <span className="glow-text">
+        <span>Loading</span> <span>cool</span> <span>state</span>
+      </span>
+    </div>
+  );
   if (loading) {
-    return <div className="list-items">loading</div>;
+    return (
+      <div className="list-items">
+        {LoadingRow}
+        {LoadingRow}
+        {LoadingRow}
+        {LoadingRow}
+        {LoadingRow}
+        {LoadingRow}
+      </div>
+    );
   }
-  if (tasks.length === 0) {
-    return <div className="list-items">empty</div>;
+  if (tasks?.length === 0) {
+    return (
+      <div className="list-items">
+        <div className="wrapper-message">
+          <span className="icon-check" />
+          <div className="title-message">You have no tasks</div>
+          <div className="subtitle-message">Sit back and relax</div>
+        </div>
+      </div>
+    );
+  }
+  let tasksInOrder = undefined
+  if(tasks) {
+    tasksInOrder = [
+      ...tasks.filter(t => t.state === 'TASK_PINNED'),
+      ...tasks.filter(t => t.state !== 'TASK_PINNED'),
+    ];
   }
 
   return (
     <div className="list-items">
-      {tasks.map(task => (
+      {tasksInOrder?.map(task => (
         <Task key={task.id} task={task} {...events} />
       ))}
     </div>

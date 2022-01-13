@@ -3,16 +3,16 @@ import React from "react";
 
 // Types
 export interface TaskChildType {
-  id: string,
-  title: string,
-  state: string,
+  id?: string,
+  title?: string,
+  state?: string,
   updatedAt?: Date
 }
 export interface TaskPropsType {
   loading?: boolean,
   task: TaskChildType,
-  onArchiveTask: (id: string) => void,
-  onPinTask: (id: string) => void
+  onArchiveTask: (id?: string) => void,
+  onPinTask: (id?: string) => void
 }
 
 

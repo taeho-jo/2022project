@@ -7,10 +7,11 @@ import Task from "../../components/story/Task";
 
 const StoryBook = () => {
 
-  const onArchiveTask = (id: string) => {
+  const onArchiveTask = (id?: string) => {
     console.log(id)
+    console.log(typeof Task, 'asdfasdfasdfasdfasdfasdfasdf')
   }
-  const onPinTask = (id: string) => {
+  const onPinTask = (id?: string) => {
     console.log(id)
   }
 

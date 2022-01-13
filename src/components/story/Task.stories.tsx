@@ -1,15 +1,14 @@
 import React from "react";
-// import '../../assets/styles/taskBox.css'
-import Task, { TaskPropsType, TaskChildType } from "./Task";
-import {Meta, Story} from "@storybook/react";
+import Task  from "./Task";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {
   component: Task,
-  title: 'Task'
-} as Meta
+  title: 'Task',
+} as ComponentMeta<typeof Task>
 
 
-const Template: Story<TaskPropsType> = (args: TaskPropsType) => <Task {...args} />
+const Template: ComponentStory<typeof Task> = (args) => <Task {...args} />
 
 export const Default = Template.bind({});
 Default.args = {
@@ -25,8 +24,8 @@ export const Pinned = Template.bind({});
 Pinned.args = {
   task: {
     ...Default.args.task,
-    state: 'TASK_PINNED',
-  },
+    state: 'TASK_PINNED'
+  }
 };
 
 export const Archived = Template.bind({});

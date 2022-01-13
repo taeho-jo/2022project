@@ -22,6 +22,11 @@ interface MainCardType {
   alt: string,
   title: string
 }
+interface Atype {
+  id: string,
+  task: number[],
+  loading: boolean
+}
 
 // Data
 const MAIN_HOME_CARD: Array<MainCardType> = [
