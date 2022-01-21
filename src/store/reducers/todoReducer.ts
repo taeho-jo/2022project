@@ -30,8 +30,8 @@ export const todoReducer = createSlice({
     },
     update: (state, action: PayloadAction<UpdateType>) => {
       const { id, todo } = action.payload
-      return state = state.map(el => el.id === id ? {...el, todo: todo} : el)
-      // const filterArray = state.filter(el => el.id !== id)
+      return state.map(el => el.id === id ? {...el, todo: todo} : el)
+
     },
     remove: (state, action: PayloadAction<removeType>) => {
       const { id } = action.payload
@@ -40,11 +40,6 @@ export const todoReducer = createSlice({
     checkDone: (state, action: PayloadAction<CheckDoneType>) => {
       const { id, done } = action.payload
       return state.map(el => el.id === id ? {...el, done} : el)
-      // const obj = state.find(el => el.id === id)
-      // console.log(obj)
-      // if(obj) {
-      //   obj.done = done
-      // }
     },
   }
 })
